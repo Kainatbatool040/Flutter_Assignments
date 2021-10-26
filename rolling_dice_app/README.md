@@ -14,3 +14,5 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+![Ludo_player](https://user-images.githubusercontent.com/91284782/138027290-6cb63881-a3a5-428e-acf1-35419727302c.PNG)
