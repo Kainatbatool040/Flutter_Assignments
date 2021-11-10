@@ -1,0 +1,51 @@
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'Home_page.dart';
+
+
+void main() {
+  return runApp(
+    MaterialApp(
+      title: ' SplashScreen ',
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(
+      ),
+    ),
+  );
+}
+
+class SplashScreen extends StatefulWidget {
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return SplashScreenState();
+  }
+}
+
+class SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(image: AssetImage('assets/images/splash_screen.png')),
+          ),
+        );
+  }
+
+  Future<Timer> loadData() async {
+    return Timer(const Duration(seconds: 3), onDoneLoading);
+  }
+
+  onDoneLoading() async {
+    Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) =>  HomePage()));
+  }
+}
